@@ -1,0 +1,112 @@
+\documentclass[11pt
+%,serif,marthserif
+,fragile=singleslide
+%%dvips
+%%,draft
+]{beamer}
+
+%% include the preamble and all setup
+\input{setup.tex}
+
+%% Slides info
+
+% Specifiy title here
+\title[
+short title
+]
+{
+	Long title
+}
+\subtitle
+{} % (optional subtitle)
+
+\author[Short Name]{Full Author Name}
+
+\institute[UCLA] % (optional, but mostly needed)
+{
+	Departments of Biomathematics and Human Genetics \\
+	David Geffen School of Medicine at UCLA, and \\
+	Department of Biostatistics \\
+	UCLA Fielding School of Public Health
+	% - Use the \inst command only if there are several affiliations.
+	% - Keep it simple, no one is interested in your street address.
+}
+%\date[short date]{Long date}
+
+\subject{Computational Biology}
+% This is only inserted into the PDF information catalog. Can be left
+% out.
+
+
+% start the slides
+\begin{document}
+
+\begin{frame}
+%  \titlepage
+\begin{columns}
+	\begin{column}{0.33\textwidth}
+		\includegraphics[width=1.0\textwidth]{figures/logo_title_page}
+	\end{column}
+	\begin{column}{0.66\textwidth}
+		\begin{center}
+			{\LARGE
+				The full title } \\[2em]
+			
+				Author name
+%				}
+		\end{center}
+	\end{column}
+\end{columns}
+\vspace{1em}
+\vspace{1em}
+
+\end{frame}
+
+% \begin{frame}[fragile] % need [fragile] option
+% \frametitle{Using R code chunks}
+% To show code verbatim, need the option [fragile] when you begin the frame.
+%
+% Generate data as $y = x + \epsilon$, with $\epsilon \sim N(0,1)$ and plot it:
+% <<fig.height=2, fig.width=6, out.width='.8\\linewidth', dev='pdf', fig.align='center'>>=
+% par(mar=c(4,4,.1,.1))
+% x = 1:30
+% e = rnorm(30)
+% y = x + e
+% plot(x, y)
+% abline(lm(y~x))
+% @
+% \end{frame}
+
+\begin{frame}
+	\frametitle{A sample slide}
+	\begin{columns}
+		\begin{column}{0.49\textwidth}
+			First column here
+		\end{column}
+		\begin{column}{0.49\textwidth}
+			.... and second column here
+		\end{column}
+		
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Item list and references}
+	\begin{itemize}
+		\item point 1
+		\item point 2
+		\item \cite{hripcsak2015observational}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+	\frametitle{References}
+	\bibliographystyle{amsalpha}
+	\bibliography{ref.bib}
+\end{frame}
+
+%END
+
+\end{document}
